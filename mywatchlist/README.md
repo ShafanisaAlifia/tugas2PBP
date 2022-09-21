@@ -1,5 +1,9 @@
-Jelaskan perbedaan antara JSON, XML, dan HTML!
-Jawab :
+Link Herokuapp html : https://tugas2-alip.herokuapp.com/mywatchlist/html
+Link Herokuapp json : https://tugas2-alip.herokuapp.com/mywatchlist/json
+Link Herokuapp xml : https://tugas2-alip.herokuapp.com/mywatchlist/xml
+
+
+## Jelaskan perbedaan antara JSON, XML, dan HTML!
 JSON 
 JSON adalah singkatan dari JavaScript Object Notation merupakan suatu format yang digunakan untuk menyimpan, membaca, serta menukar informasi dari web server sehingga dapat dibaca oleh para pengguna.
 
@@ -52,7 +56,7 @@ Terdapat beberapa fitur baru yang terkadang tidak dapat digunakan pada browser d
 Perilaku browser yang tidak dapat diprediksi membuat proses render tag baru tekendala
 
 
-Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
+## Jelaskan mengapa kita memerlukan data delivery dalam pengimplementasian sebuah platform?
 Jawab :
 Penyampaian data yang disimpan di database ke frontend
 Tentunya data yang disimpan dalam database akan digunakan pada suatu saat, karena itu, data delivery dibutuhkan dalam pembuatan sebuah aplikasi.
@@ -64,7 +68,7 @@ Tim Frontend hanya perlu memanggil suatu url yang dikerjakan oleh tim backend da
 
 Tim backend hanya perlu menyediakan url dan menangani request dari frontend
 
-Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
 Jawab :
 Pembuatan fixtures yang berisi initial_watchlist_data.json
 Pembuatan constants film-film yang sudah/belum pernah saya tonton, diisi dengan data-data yang sesuai model MyWatchList.
