@@ -1,0 +1,123 @@
+[
+    {
+        "model":"mywatchlist.MyFilm",
+        "pk":1,
+        "fields":{
+            "watched" : "already watched",
+            "title" : "The Avengers",
+            "rating" : "5",
+            "release_date" : "May 4, 2012",
+            "review" : "The Avengers was so much fun and Marvel absolutely nailed it! Let me explain what I loved! Positives: 1. The characters; this is a no brainer! Without these awesome characters this film would be nothing. They honestly shape this film and their banter and chemistry with one another is awesome! There are a lot of humorous as well as heartfelt moments which all lend to an awesome film! 2. The villain; Loki in my opinion is the best villain of the MCU."
+        }
+},
+{
+        "model":"mywatchlist.MyFilm",
+        "pk":2,
+        "fields":{
+            "watched" : "already watched",
+            "title" : "Avengers: Endgame",
+            "rating" : "4",
+            "release_date" : "April 24, 2019",
+            "review" : "The conclusion of this epic storyline is meant to be, err, epic, and in many ways it succeeds. Marvel throws a proverbial feast for it's legions of fandom for sticking through 10 years and many divergent stories, and many different heroes. "
+        }
+    },
+    {
+        "model":"mywatchlist.MyFilm",
+        "pk":3,
+        "fields":{
+            "watched" : "already watched",
+            "title" : "Avengers: Infinity War",
+            "rating" : "5",
+            "release_date" : "April 25, 2018",
+            "review" : "The Marvel Universe unites in Avengers: Infinity War, an epic, action-packed adventure. The film does an extraordinary job at bringing together all of the different Marvel characters and teams them up in interesting ways.  "
+        }
+    },
+    {
+        "model":"mywatchlist.MyFilm",
+        "pk":4,
+        "fields":{
+            "watched" : "already watched",
+            "title" : "Harry Potter and the Prisoner of Azkaban",
+            "rating" : "4",
+            "release_date" : "June 4, 2004",
+            "review" : "Among the movie's many special effects, I especially admired the gnarled tree that figures in the third act. The tree is introduced with a wink to the viewer who knows it is CGI"
+        }
+},
+{
+    "model":"mywatchlist.MyFilm",
+    "pk":5,
+    "fields":{
+        "watched" : "already watched",
+        "title" : "Harry Potter and the Chamber of Secrets",
+        "rating" : "4",
+        "release_date" : "November 15, 2002",
+        "review" : "The first movie was the setup, and this one is the payoff. Harry Potter and the Chamber of Secrets leaves all of the explanations of wizardry behind and plunges quickly into an adventure that's darker and scarier than anything in the first Harry Potter movie."
+    }
+},
+{
+    "model":"mywatchlist.MyFilm",
+    "pk":6,
+    "fields":{
+        "watched" : "already watched",
+        "title" : "Parasite",
+        "rating" : "5",
+        "release_date" : "May 30, 2019",
+        "review" : "Parasite is fantastic. It's clever. It's funny. It's disturbing. And yes, there is a powerful underlying theme of the divide between rich and poor."
+    }
+},
+{
+    "model":"mywatchlist.MyFilm",
+    "pk":7,
+    "fields":{
+        "watched" : "already watched",
+        "title" : "Pengabdi Setan",
+        "rating" : "4",
+        "release_date" : "September 28, 2017",
+        "review" : "On a scale from zero to five, I would give this film a four because I feel like it has enough “juice” of being a great horror film, with twists that you do not see coming, especially if you have not watched the original version. I definitely recommend Pengabdi Setan (2017) to all horror film enthusiasts, particularly if you enjoy the Asian ones. "
+    }
+},
+{
+    "model":"mywatchlist.MyFilm",
+    "pk":8,
+    "fields":{
+        "watched" : "already watched",
+        "title" : "The Nun",
+        "rating" : "3",
+        "release_date" : "September 4, 2018",
+        "review" : "Objectively speaking, this not a good movie. Even so, I have to admit I kind of liked it. But if a movie's atmosphere and look is strong enough, I can kind of get past a lot of that, and The Nun just nailed a lot of the atmosphere of stuff I like. "
+    }
+},
+{
+    "model":"mywatchlist.MyFilm",
+    "pk":9,
+    "fields":{
+        "watched" : "already watched",
+        "title" : "Guardians Of The Galaxy",
+        "rating" : "5",
+        "release_date" : "July 21, 2014",
+        "review" : "Guardians of the Galaxy is one of my favourite comic book films! It is by far the funniest MCU film I've seen and it is one of the funniest comic book films I've seen! This film could've easily not worked, but they nailed it and I can't wait for Vol. 3!"
+    }
+},
+{
+    "model":"mywatchlist.MyFilm",
+    "pk":10,
+    "fields":{
+        "watched" : "already watched",
+        "title" : "Thor: Love and Thunder",
+        "rating" : "5",
+        "release_date" : "July 8, 2022",
+        "review" : "In Taika Waititi we trust! Thor: Love and Thunder that harken back to what made Ragnarok great, it's not quite on the same level for me. Still, Thor: Love and Thunder is a genuine blast at the movies and here's why I recommend checking it out. "
+    }
+},
+{
+    "model":"mywatchlist.MyFilm",
+    "pk":11,
+    "fields":{
+        "watched" : "already watched",
+        "title" : "Captain America: The Winter Soldier",
+        "rating" : "4",
+        "release_date" : "April 4, 2014",
+        "review" : "In my opinion this is marvels best film. Its realistic dark tone sets a familiar superhero 'Captain America' to battle Hydra a natzi organization responsible for the life of his dead friend Bucky. This movies story and very well directed action sequences are the finest sequences in the MCU movies. "
+    }
+}
+]
