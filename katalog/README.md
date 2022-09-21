@@ -1,10 +1,9 @@
 ## Link HerokuApp: https://tugas2-alip.herokuapp.com/katalog/ 
 
-## Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html;
-Jawab : 
+## Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html; 
+![Bagan](https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/katalog/BaganDjango.png "Bagan Django")
 
 ## Jelaskan kenapa menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
-Jawab : 
 Virtual Environment merupakan sebuah ruang lingkup virtual yang terisolasi dari dependencies utama.
 
 Virtual environment sangat berguna ketika kita membutuhkan dependensi yang berbeda antara proyek yang berjalan pada sistem operasi yang sama. Virtual environment biasanya digunakan untuk proyek berbasis Python. Karena project memiliki kebutuhan/dependensi yang berbeda, maka diperlukan virtual environment untuk menjalankannya, tanpa mengubah konfigurasi sistem operasi yang kita gunakan.
@@ -12,7 +11,6 @@ Virtual environment sangat berguna ketika kita membutuhkan dependensi yang berbe
 Kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment, namun Python merekomendasikan penggunaan venv setiap kita akan membuat proyek baru. Ini untuk memastikan bahwa versi library yang digunakan dalam satu proyek tidak akan berubah jika kita memperbarui library yang sama di proyek lain.
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan poin 1 sampai dengan 4 di atas.
-Jawab :
 Adapun beberapa cara yang saya lakukan untuk mengimplementasikan poin 1 - 4  adalah :
 1. Pertama saya membuat new repository yang memuat isi source code yang telah diberikan dan melalukan clone repository ke dalam folder local.
 2. Setelah berhasil meng-clone folder tersebut, kemudian saya mulai mengerjakannya pada VsCode. Mulai dari views.py saya menambahkan list_item yang berisikan objek dari katalog kemudian menambahkan context 'list item', 'nama', dan 'NPM' yang berfungsi sebagai variabel untuk mapping ke katalog.html.
