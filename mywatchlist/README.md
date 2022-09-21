@@ -69,7 +69,6 @@ Tim Frontend hanya perlu memanggil suatu url yang dikerjakan oleh tim backend da
 Tim backend hanya perlu menyediakan url dan menangani request dari frontend
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
-Jawab :
 Pembuatan fixtures yang berisi initial_watchlist_data.json
 Pembuatan constants film-film yang sudah/belum pernah saya tonton, diisi dengan data-data yang sesuai model MyWatchList.
 Pembuatan models.py
@@ -94,6 +93,6 @@ watchlist.html berisi frontend yang akan mengembalikan html yang menyediakan dat
 
 {% load static %} dan import style.css yang dibuat membantu agar styling css yang dibuat diterapkan ke watchlist.html
 
-
+![image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/mywatchlist/Postman%209_22_2022%2012_18_39%20AM.png>)
 ![image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/mywatchlist/Postman%209_22_2022%2012_18_20%20AM.png>)
 ![image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/mywatchlist/Postman%209_22_2022%2012_16_10%20AM.png>)
