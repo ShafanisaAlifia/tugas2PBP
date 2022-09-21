@@ -71,6 +71,3 @@ Data delivery digunakan sebagai alat komunikasi antara client dan server. Karena
 11. Membuat file `style.css` pada `static\css` membantu agar styling css yang dibuat diterapkan ke mywatchlist.html
 11. Terakhir, memastikan bahwa web telah berjalan dengan benar saya melakukan deploy ke Herokuapp. Dengan cara melakukan git add-commit-push.
 
-![image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/mywatchlist/Postman%209_22_2022%2012_18_39%20AM.png>)
-![image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/mywatchlist/Postman%209_22_2022%2012_18_20%20AM.png>)
-![image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/mywatchlist/Postman%209_22_2022%2012_16_10%20AM.png>)
