@@ -93,3 +93,5 @@ Pembuatan watchlist.html
 watchlist.html berisi frontend yang akan mengembalikan html yang menyediakan data-data watchlist dalam bentuk tabel.
 
 {% load static %} dan import style.css yang dibuat membantu agar styling css yang dibuat diterapkan ke watchlist.html
+
+![image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/mywatchlist/Postman%209_22_2022%2012_16_10%20AM.png>)
