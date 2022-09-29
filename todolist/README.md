@@ -30,10 +30,3 @@ user harus melakukan login terlebih dahulu lalu membawa `request.user` dan `todo
 7. Pada `todolist/urls.py` kita perlu untuk mendaftarkan fungsi `login_user`, `logout_user`, `register`, `show_todolist`, dan `create_task` yang baru kita buat tadi. Setelah itu, kita perlu melakukan routing pada `project_django/urls.py` dengan membuat path `path('todolist/', include('todolist.urls'))` agar semua path dalam `todolist.urls` dapat dilaksanakan dengan baik.
 8. Setelah semua selesai dibuat kita perlu untuk melakukan `makemigration`, `migrate` dan melakukan `runserver` untuk mengecek apakah new app yang kita buat sudah berjalan dengan baik.
 9. Terakhir kita lakukan `add` `commit` `push` dan deployment pada HerokuApp akan berjalan secara otomatis.
-
-## Akun Dummy
-uname : Alip
-pass : hihuhihu
-
-uname : Alifia
-pass : hahahihi
