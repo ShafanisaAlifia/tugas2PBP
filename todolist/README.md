@@ -7,7 +7,7 @@ Itu sebabnya Django menyediakan cara sederhana untuk mencegahnya, yaitu dengan m
 
 
 ## Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual.
-Ya kita dapat membuat form secara manual tanpa menggunakan {{ form.as_table }}. Yaitu dengan membuat elemen <form>, dan membuat tag <input> dengan atribute widget sesuai dengan yang kita butuhkan. Contohnya adalah seperti `create_task.html` milik saya berikut ini.
+Ya kita dapat membuat form secara manual tanpa menggunakan {{ form.as_table }}. Yaitu dengan membuat elemen <form>, dan membuat tag <input> dengan atribute widget sesuai dengan yang kita butuhkan. 
 
 
 ## Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
