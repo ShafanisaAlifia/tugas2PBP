@@ -1,10 +1,11 @@
+# Tugas 3 PBP - Shafanisa Alifia
 ## Link Website
 HTML : [link](https://tugas2-alip.herokuapp.com/mywatchlist/html)
 JSON : [link](https://tugas2-alip.herokuapp.com/mywatchlist/json)
 XML  : [link](https://tugas2-alip.herokuapp.com/mywatchlist/xml)
 
 ## Jelaskan perbedaan antara JSON, XML, dan HTML!
-JSON 
+### JSON 
 JSON adalah singkatan dari JavaScript Object Notation merupakan suatu format yang digunakan untuk menyimpan, membaca, serta menukar informasi dari web server sehingga dapat dibaca oleh para pengguna. Walaupun memiliki fungsi yang serupa dengan XML, JSON memiliki perbedaan di beberapa sektor seperti cara menyimpan elemennya, keamanan, dan cara penerapannya. 
 
 Kelebihan
@@ -16,7 +17,7 @@ Kekurangan
 - Format penulisannya agak sulit untuk dipahami
 - Rentan terhadap hacking
 
-XML 
+### XML 
 XML sendiri merupakan markup language yang diciptakan oleh World Wide Web Consortium bahasa ini digunakan untuk menyederhanakan pertukaran dan penyimpanan data. XML ini terdiri dari tiga struktur yaitu deklarasi, atribut, dan elemen. 
 
 Kelebihan
@@ -29,7 +30,7 @@ Kekurangan
 - Ukuran cukup besar, tergantung pada siapa yang menulisnya
 - Biaya penyimpanan dan pengiriman data cukup tinggi
 
-HTML
+### HTML
 HTML (HyperText Markup Language) adalah suatu bahasa yang menggunakan tanda-tanda tertentu (tag) untuk menyatakan kode-kode yang harus ditafsirkan oleh browser agar halaman tersebut dapat ditampilkan secara benar. Perbedaannya dengan XML adalah dalam kegunaannya, XML digunakan untuk menyimpan dan menyederhanakan pertukaran data, Sedangkan HTML digunakan untuk menampilkan data.
 
 Kelebihan
@@ -51,23 +52,32 @@ Data delivery digunakan sebagai alat komunikasi antara client dan server. Karena
 
 ## Cara implementasi aplikasi mywatchlist
 1. Membuat aplikasi mywatchlist dengan cara `python manage.py startapp mywatchlist` dan menambahkan `mywatchlist` pada `setting.py`.
-2. Membuat `views.py` dan `urls.py`
-    - `urls.py` memiliki 3 routes, show_html, show_json, show_xml, dan index yang mengembalikan HttpResponse kosong.
-3. Membuat show_xml, show_json, dan show_html
-    - show_xml dan show_json hanya mengembalikan data pada model MyFilm dalam bentuk JSON dan XML
-    - show_html menerima context yang berupa data watchlist di database, dan mengembalikan mywatchlist.html
-4. Membuat fixtures yang berisi initial_mywatchlist_data.json
-5. Membuat sebuah models baru dengan nama "MyFilm" di `mywatchlist/models.py` sesuai dengan attribute-attribute yang telah disebutkan pada deskripsi tugas dengan fields:
-    - watched: models.CharField (max_length = 50)
-    - title: models.CharField (max_length = 50) 
-    - rating: models.IntegerField() (range = [1 ... 5])
-    - release_date: models.CharField (max_length = 50)
+2. Membuat `views.py`
+    - Membuat show_xml, show_json, dan show_html : show_xml dan show_json hanya mengembalikan data pada model MyFilm dalam bentuk JSON dan XML
+    - show_html menerima `context` yang berupa data watchlist di database, dan mengembalikan `mywatchlist.html`
+3. Membuat `urls.py`
+     - `urls.py` memiliki 3 routes, show_html, show_json, show_xml, dan index yang mengembalikan HttpResponse kosong.
+5. Membuat `fixtures` yang berisi `initial_mywatchlist_data.json`
+6. Membuat sebuah models baru dengan nama "MyFilm" di `mywatchlist/models.py` sesuai dengan attribute-attribute yang telah disebutkan pada deskripsi tugas dengan fields:
+    - watched: models.CharField 
+    - title: models.CharField 
+    - rating: models.IntegerField() 
+    - release_date: models.CharField 
     - review: models.TextField()
-6. Setelah melakukan semua tahapan di atas, aktifkan virtual environment pada CMD untuk melakukan `makemigrations`, `migrate`, `loaddata`
-7. Membuat `mywatchlist.html` pada `mywatchlist/templates`
-8. Update `Procfile` dan tambahkan `python manage.py loaddata initial_watchlist_data.json`
-9. Mengakses URL dengan menggunakan postman
-10. Menambahkan unit test pada tests.py yang ada dalam folder mywatchlist agar bisa mengembalikan respon HTTP 200 OK, 
-11. Membuat file `style.css` pada `static\css` membantu agar styling css yang dibuat diterapkan ke mywatchlist.html
-11. Terakhir, memastikan bahwa web telah berjalan dengan benar saya melakukan deploy ke Herokuapp. Dengan cara melakukan git add-commit-push.
+7. Setelah melakukan semua tahapan di atas, aktifkan virtual environment pada CMD untuk melakukan `makemigrations`, `migrate`, `loaddata`
+8. Membuat `mywatchlist.html` pada `mywatchlist/templates`
+9. Update `Procfile` dan tambahkan `python manage.py loaddata initial_watchlist_data.json`
+10. Mengakses URL dengan menggunakan postman
+11. Menambahkan unit test pada `tests.py` yang ada dalam folder mywatchlist agar bisa mengembalikan respon HTTP 200 OK, 
+12. Membuat file `style.css` pada `static\css` membantu agar styling css yang dibuat diterapkan ke `mywatchlist.html`
+13. Terakhir, memastikan bahwa web telah berjalan dengan benar saya melakukan deploy ke Herokuapp. Dengan cara melakukan git add-commit-push.
 
+## POSTMAN
+### HTML
+![image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/mywatchlist/Postman%209_22_2022%2012_18_39%20AM.png>)
+
+### JSON
+![image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/mywatchlist/Postman%209_22_2022%2012_18_20%20AM.png>)
+
+### XML
+![image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/mywatchlist/Postman%209_22_2022%2012_16_10%20AM.png>)
