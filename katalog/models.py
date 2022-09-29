@@ -6,5 +6,5 @@ class CatalogItem(models.Model):
     item_stock = models.IntegerField()
     description = models.TextField()
     rating = models.IntegerField()
-    item_url = models.URLField()
+    item_url = models.URLField() 
 

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block meta %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'file.css' %}">
+{% endblock meta %}
+
+<title>TODO List</title>
+
+{% block content %}
+<p>
+  Hi! {{ user.get_username }} |
+  <a href="{% url 'todolist:logout' %}">Logout</a>
+</p>
+<a href="{% url 'todolist:create_task' %}">Create a new task</a>
+
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Is Finished</th>
+    <th>Delete</th>
+  </tr>
+  {% for todo in list_todo %}
+  <tr>
+    <td>{{ todo.date }}</td>
+    <td>{{ todo.title }}</td>
+    <td>{{ todo.description }}</td>
+    <td>
+      {{ todo.is_finished}} |
+      <form action="{% url 'todolist:update_task' todo.id %}" method="POST">
+        {% csrf_token %}
+        <button>Change Status</button>
+      </form>
+    </td>
+    <td>
+      <form action="{% url 'todolist:delete_task' todo.id %}" method="POST">
+        {% csrf_token %}
+        <button>Delete</button>
+      </form>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% if messages %}
+<ul class="msg">
+  {% for message in messages %}
+  <li>{{ message }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock content %}
