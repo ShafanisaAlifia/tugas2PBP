@@ -9,16 +9,14 @@ Itu sebabnya Django menyediakan cara sederhana untuk mencegahnya, yaitu dengan m
 
 
 ## Apakah kita dapat membuat elemen <form> secara manual (tanpa menggunakan generator seperti {{ form.as_table }})? Jelaskan secara gambaran besar bagaimana cara membuat <form> secara manual.
-Ya kita dapat membuat form secara manual tanpa menggunakan {{ form.as_table }}. Yaitu dengan membuat elemen <form>, dan membuat tag <input> dengan atribute widget sesuai dengan yang kita butuhkan. Contohnya adalah seperti `create_task.html` milik saya berikut ini.
-![Image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/todolist/models.jpg>)
-
+Ya kita dapat membuat form secara manual tanpa menggunakan {{ form.as_table }}. Yaitu dengan membuat elemen <form>, dan membuat tag <input> dengan atribute widget sesuai dengan yang kita butuhkan. 
 
 ## Jelaskan proses alur data dari submisi yang dilakukan oleh pengguna melalui HTML form, penyimpanan data pada database, hingga munculnya data yang telah disimpan pada template HTML.
 Saat user mengklik tombol untuk submit form melalui HTML form, data-data yang dimasukkan ke form akan diperiksa, data tersebut dapat dilihat dalam variabel request.POST. Dalam `views.py` dilakukan `save()` dan data tersebut akan tersimpan. Selanjutnya, server akan memproses input yang diberikan melalui `views.py` yang ada. 
  
 Data tersebut diproses oleh server, untuk memeriksa apakah sesuai dengan batasan yang diberikan oleh form. Jika data yang dimasukkan tidak valid, user akan diarahkan untuk mengisi kembali form tersebut. Jika sudah valid, data tersebut akan diproses, server akan mengambil data tersebut, dan membuat atau menyimpannya ke database. Ketika dibutuhkan, Model pada database dapat diambil dan ditampilkan pada template HTML.
 
-## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+## Implementasi dari checklist di atas
 1. Karena menggunakan project Django yang sudah ada, kita bisa langsung membuat new app `todolist` dengan cara `python manage.py startapp todolist`. Dan jangan lupa untuk mendaftarkan new app `todolist` pada `project_django/settings.py`.
 2. Create new models dengan nama Task pada `todolist/models.py` sesuai dengan attribute yang disebutkan pada deskripsi tugas.
 ![Image](<https://github.com/ShafanisaAlifia/tugas2PBP/blob/main/todolist/models.jpg>)
@@ -39,5 +37,12 @@ user harus melakukan login terlebih dahulu lalu membawa `request.user` dan `todo
 8. Setelah semua selesai dibuat kita perlu untuk melakukan `makemigration`, `migrate` dan melakukan `runserver` untuk mengecek apakah new app yang kita buat sudah berjalan dengan baik.
 
 9. Terakhir kita lakukan `add` `commit` `push` dan deployment pada HerokuApp akan berjalan secara otomatis.
+ 
+## Akun Dummy
+Username : Alip
+Password : hihuhihu
+ 
+Username : Alifia
+Password : hahahihi
 
 
