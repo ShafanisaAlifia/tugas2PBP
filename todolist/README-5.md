@@ -13,26 +13,24 @@ Eksternal CSS adalah kode CSS yang ditulis terpisah dengan kode HTML Eksternal C
 
 
 ## Jelaskan tag HTML5 yang kamu ketahui.
-- <!DOCTYPE> : 	Mendefinisikan jenis document
-- <a> : Mendefinisikan hyperlink
-- <input> : Menerima input dari user
-- <body> : 	Mendefinisikan element body
-- <span> : 	Mendefinisikan bagian dalam sebuah document
-- <i> : Mendefinisikan text italic
-- <html> : Mendefinisikan document html
-- <h1> - <h6> : Mendefinisikan header
-- <div> : Mendefinisikan bagian dalam suatu document
-- <button> : Mendefinisikan document button/tombol
-- <form> : Mendefinisikan formulir
-- DLL
+- `<!DOCTYPE>` : 	Mendefinisikan jenis document
+- `<a>` : Mendefinisikan hyperlink
+- `<input>` : Menerima input dari user
+- `<body>` : 	Mendefinisikan element body
+- `<span>` : 	Mendefinisikan bagian dalam sebuah document
+- `<i>` : Mendefinisikan text italic
+- `<html>` : Mendefinisikan document html
+- `<h1> - <h6>` : Mendefinisikan header
+- `<div>` : Mendefinisikan bagian dalam suatu document
+- `<button>` : Mendefinisikan document button/tombol
+- `<form>` : Mendefinisikan formulir
 
 
 ## Jelaskan tipe-tipe CSS selector yang kamu ketahui.
-- * : Selektor universal (selektor yang digunakan untuk menyeleksi semua elemen pada jangkauan (scope) tertentu)
-- :hover : Style css pada elemen akan berubah ketika pointer berada di atas elemen HTML
-- :focus : Style akan diterapkan jika elemen HTML diperhatikan oleh web browser.
-- :nth-child(n) : Untuk memberikan styling khusus kepada salah satu elemen pada HTML dengan selector yang sama
-- DLL
+- `*` : Selektor universal (selektor yang digunakan untuk menyeleksi semua elemen pada jangkauan (scope) tertentu)
+- `:hover` : Style css pada elemen akan berubah ketika pointer berada di atas elemen HTML
+- `:focus` : Style akan diterapkan jika elemen HTML diperhatikan oleh web browser.
+- `:nth-child(n)` : Untuk memberikan styling khusus kepada salah satu elemen pada HTML dengan selector yang sama
 
 
 ## Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
