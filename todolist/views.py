@@ -1,3 +1,4 @@
+from multiprocessing import context
 from todolist.models import Task
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
@@ -6,6 +7,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect
+from django.core import serializers
 from django.urls import reverse
 
 
@@ -62,7 +64,8 @@ def create_task(request):
             date=datetime.datetime.today(),
         )
         return HttpResponseRedirect(reverse("todolist:show_todolist"))
-    return render(request, "create_task.html")
+    context = {'username' : request.user}
+    return render(request, "create_task.html", context)
 
 def delete_task(request, id):
     task = Task.objects.get(user=request.user, id=id)
@@ -74,3 +77,4 @@ def update_task(request, id):
     task.is_finished = not task.is_finished
     task.save(update_fields=["is_finished"])
     return HttpResponseRedirect(reverse("todolist:show_todolist"))
+    
