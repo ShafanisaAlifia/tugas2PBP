@@ -1,15 +1,23 @@
-from multiprocessing import context
+import datetime
+from django import forms
 from todolist.models import Task
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-import datetime
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.core import serializers
 from django.urls import reverse
+from datetime import date
 
+
+class NewTodoForm(forms.Form):
+    date = forms.DateField(label="Tanggal")
+    title = forms.CharField(label="Judul")
+    description = forms.CharField(
+        label="Deskripsi", widget=forms.Textarea(attrs={"cols": ""})
+    )
 
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
@@ -28,16 +36,13 @@ def login_user(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
            login(request, user) # melakukan login terlebih dahulu
-           response = HttpResponseRedirect(reverse("todolist:show_todolist")) # membuat response
-           return response
+           return redirect("todolist:show_todolist")
         else:
             messages.info(request, 'Wrong Username or Password!')
-    context = {}
-    return render(request, 'login.html', context)
+    return render(request, 'login.html')
 
 def register(request):
     form = UserCreationForm()
-
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():
@@ -50,31 +55,78 @@ def register(request):
 
 def logout_user(request):
     logout(request)
-    response = HttpResponseRedirect(reverse('todolist:login'))
+    response = HttpResponseRedirect(reverse('todolist:login_user'))
     return response
 
 def create_task(request):
     if request.method == "POST":
-        title = request.POST.get("title")
-        description = request.POST.get("description")
-        Task.objects.create(
+        form = NewTodoForm(request.POST)
+        if form.is_valid():
+            task = Task(
+                date=form.cleaned_data["date"],
+                title=form.cleaned_data["title"],
+                description=form.cleaned_data["description"],
+                user=request.user,
+            )
+            task.save()
+            messages.success(request, "Saved successfully!")
+            return redirect("todolist:show_todolist")
+
+    form = NewTodoForm()
+    ctx = {"form": form}
+    return render(request, "create.html", ctx)
+
+def update_task(request, post_id: int):
+    if request.method == "POST":
+        task = Task.objects.filter(id=post_id, user=request.user).first()
+        if task:
+            task.is_finished = not task.is_finished
+            task.save()
+            messages.success(request, "Successful update!")
+        else:
+            messages.error(request, "Tasks not found!")
+
+    return redirect("todolist:show_todolist")
+
+def delete_task(request, post_id: int):
+    if request.method == "POST":
+        task = Task.objects.filter(id=post_id, user=request.user).first()
+        if task:
+            task.delete()
+            messages.success(request, "Successfully deleted!")
+        else:
+            messages.error(request, "Tasks not found!")
+
+    return redirect("todolist:show_todolist")
+
+def show_task_json(request):
+    todos = Task.objects.filter(user=request.user).order_by("date").all()
+    return HttpResponse(
+        serializers.serialize("json", todos), content_type="application/json"
+    )
+
+def add_task_json(request):
+    if request.method == "POST":
+        task = Task(
+            date=date.fromisoformat(request.POST["date"]),
+            title=request.POST["title"],
+            description=request.POST["description"],
             user=request.user,
-            title=title,
-            description=description,
-            date=datetime.datetime.today(),
         )
-        return HttpResponseRedirect(reverse("todolist:show_todolist"))
-    context = {'username' : request.user}
-    return render(request, "create_task.html", context)
+        task.save()
+        return HttpResponse(
+            serializers.serialize("json", [task]),
+            content_type="application/json",
+        )
+    return HttpResponse("Invalid method", status_code=405)
 
-def delete_task(request, id):
-    task = Task.objects.get(user=request.user, id=id)
-    task.delete()
-    return HttpResponseRedirect(reverse("todolist:show_todolist"))
+def delete_task_json(request, post_id: int):
+    if request.method == "DELETE":
+        task = Task.objects.filter(id=post_id, user=request.user).first()
+        if task:
+            task.delete()
+            return HttpResponse("OK")
+        else:
+            return HttpResponse("Not Found", status_code=404)
 
-def update_task(request, id):
-    task = Task.objects.get(user=request.user, id=id)
-    task.is_finished = not task.is_finished
-    task.save(update_fields=["is_finished"])
-    return HttpResponseRedirect(reverse("todolist:show_todolist"))
-    
+    return HttpResponse("Invalid method", status_code=405)

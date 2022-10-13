@@ -27,25 +27,21 @@
                     <i></i>
                 </div>
                 <div class="links">
+                    not have account?
                     <a href="{% url 'todolist:register' %}">Create Account</a>
                 </div>
                 <input class="btn btn-primary login_btn" type="submit" value="Login" />
             </form>
-        </div>
             {% if messages %}
-	<ul>
-		{% for message in messages %}
-		<li>{{ message }}</li>
-		{% endfor %}
-	</ul>
-	{% endif %}
-	<div style="display: flex; flex-direction: row; gap: 8px">
-		<div>Belum mempunyai akun?</div>
-		<a href="{% url 'todolist:register' %}" style="color: blue">Buat Akun</a>
-	</div>
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
     </div>
 </body>
 </html>
 
 {% endblock content %}
-
