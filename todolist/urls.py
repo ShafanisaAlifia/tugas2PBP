@@ -10,6 +10,7 @@ from todolist.views import (
     add_task_json,
     delete_task_json,
     show_task_json,
+
 )
 
 app_name = 'todolist'
@@ -19,14 +20,11 @@ urlpatterns = [
     path('register/', register, name='register'),
     path('login/', login_user, name='login'),
     path('logout/', logout_user, name='logout'),
-    path("create/", create_task, name="create_task"),
+    path('create-task/', create_task, name='create_task'),
     path("delete/<int:post_id>", delete_task, name="delete_task"),
     path("delete/json/<int:post_id>", delete_task_json, name="delete_task_json"),
     path("update/<int:post_id>", update_task, name="update_task"),
     path("json", show_task_json, name="show_task_json"),
     path("create/json", add_task_json),
-    path("create-task/", create_task, name="create_task"),
-    path("delete-task/<int:id>", delete_task, name="delete_task"),
-    path("update-task/<int:id>", update_task, name="update_task"),
 ]
 

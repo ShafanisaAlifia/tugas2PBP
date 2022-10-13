@@ -70,7 +70,7 @@
   function createCardHtml(todo, id) {
     const { title, date, description} = todo
     const isFinishedText = todo.is_finished ? "Finished" : "Not Finished"
-    return 
+    return `
       <div class="scale-100 hover:scale-105 transition card bg-neutral text-neutral-content">
         <div class="card-body items-center text-center">
           <h2 class="card-title">${title}</h2>
@@ -88,6 +88,7 @@
           </div>
         </div>
       </div>
+    `
   }
 
   function removeTodo(e) {
